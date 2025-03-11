@@ -1,0 +1,160 @@
+:root {
+    --skyblue: #009bb7;
+    --lightbrown: #ff5821;
+    --hashcolor: #cccccc;
+    --white: #ffffff;
+    --black: #000000;
+    --transition-speed: 0.3s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+body {
+    /* background-image: url("/assets/images/programmer_v_02.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+    color: var(--white);
+}
+
+
+/* General Hero Section Styling */
+
+
+.about-section,
+.my-section,
+.contact-section {
+    background-color: hsla(0, 0%, 0%, 0.9);
+
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.form-container,
+.media-content {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--hashcolor);
+    border-radius: 5px;
+    /* background-color: hsla(0, 0%, 0%, 0.8); */
+    color: var(--white);
+    font-size: 1em;
+    transition: border-color var(--transition-speed);
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--lightbrown);
+    outline: none;
+}
+
+form .msg-box {
+    height: 150px;
+    resize: none;
+}
+
+.form-btn {
+    background-color: var(--lightbrown);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.form-btn:hover {
+    background-color: var(--white);
+    color: var(--lightbrown);
+}
+.media-content ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.media-content ul li a {
+    color: var(--white);
+    font-size: 2.5em;
+    transition: color var(--transition-speed);
+}
+
+.media-content ul li a:hover {
+    color: var(--lightbrown);
+}
+
+.main-footer {
+    background-color: var(--black);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+

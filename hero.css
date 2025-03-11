@@ -1,0 +1,157 @@
+.Hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hero-text {
+    width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-text h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.top-title {
+    display: none;
+}
+
+.hero-text .name {
+    color: var(--lightbrown);
+    font-weight: 800;
+}
+
+.skill {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--lightbrown);
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list li {
+    font-size: 1.2em;
+    animation: slideIn 1s ease-in-out;
+    list-style: none;
+}
+
+/* Image Section */
+.image-section {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--lightbrown);
+    box-shadow: 0 0 10px var(--hashcolor);
+    animation: float 3s ease-in-out infinite;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .Hero {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .hero-text {
+        width: 300px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .image-section {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: var(--lightbrown);
+        box-shadow: 0 0 10px var(--hashcolor);
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .Hero {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+        display: none;
+    }
+
+    .skill {
+        font-size: 1.3em;
+    }
+
+    .list {
+        align-items: left;
+        flex-direction: row;
+    }
+
+    #top-title {
+        display: inline-block;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .list li {
+        font-size: 1.1em;
+    }
+
+    .image-section {
+        width: 200px;
+        height: 200px;
+        border-radius: 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-text .skill {
+        font-size: 1.2em;
+    }
+
+    .list li {
+        font-size: 1em;
+    }
+
+    .image-section {
+        width: 180px;
+        height: 180px;
+    }
+}

@@ -1,0 +1,135 @@
+.contact-section {
+    background-color: hsla(0, 0%, 0%, 0.9);
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--hashcolor);
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1em;
+    transition: border-color var(--transition-speed);
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--lightbrown);
+    outline: none;
+}
+
+form .msg-box {
+    height: 150px;
+    resize: none;
+}
+
+.form-btn {
+    background-color: var(--lightbrown);
+    color: var(--white);
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.form-btn:hover {
+    background-color: var(--white);
+    color: var(--lightbrown);
+}
+
+/* Social Media Icons */
+.media-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.media-content ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.media-content ul li a {
+    color: var(--white);
+    font-size: 2.5em;
+    transition: color var(--transition-speed);
+}
+
+.media-content ul li a:hover {
+    color: var(--lightbrown);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .media-content {
+        width: 100%;
+    }
+
+    .media-content ul {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .form-btn {
+        font-size: 0.9em;
+        padding: 10px 12px;
+    }
+
+    .media-content ul li a {
+        font-size: 2em;
+    }
+}
