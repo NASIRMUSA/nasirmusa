@@ -1,0 +1,53 @@
+.about-section {
+    background-color: hsla(0, 0%, 0%, 0.9);
+    padding: 40px 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-image {
+        width: 250px;
+    }
+
+    .about-text p {
+        font-size: 1em;
+    }
+}

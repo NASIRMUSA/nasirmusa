@@ -1,0 +1,96 @@
+.my-section {
+    background-color: hsla(0, 0%, 0%, 0.9);
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.my-work-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.mywork-item {
+    border: 1px solid var(--hashcolor);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--lightbrown);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.mywork-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mywork-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.card-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: white;
+}
+
+.btn {
+    background-color: var(--lightbrown);
+    color: var(--white);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    padding: 10px 15px;
+    border: none;
+    outline: 1px solid var(--hashcolor);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--lightbrown);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .my-work-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .my-section {
+        padding: 20px;
+    }
+
+    .card-content p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 8px 12px;
+    }
+}

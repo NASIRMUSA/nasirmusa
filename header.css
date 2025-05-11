@@ -1,0 +1,172 @@
+.main-header {
+    width: 100%;
+    /* min-height: 100vh; */
+    background-color: hsla(0, 0%, 0%, 0.9);
+}
+
+.container {
+    width: 90%;
+    /* max-width: 1200px; */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Existing Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.97);
+    position: fixed;
+    height: 60px;
+    top: 0;
+    z-index: 9999;
+    transition: background-color var(--transition-speed);
+}
+
+.navbar.scrolled {
+    background-color: var(--black);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.brand {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2em;
+    font-weight: 700;
+    transition: color var(--transition-speed);
+}
+
+.brand:hover {
+    color: var(--lightbrown);
+}
+
+.musa {
+    color: var(--lightbrown);
+}
+
+.main-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    padding: 10px;
+    transition: color var(--transition-speed);
+}
+
+.main-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--lightbrown);
+    bottom: 0;
+    left: 0;
+    transition: width var(--transition-speed);
+}
+
+.main-menu a:hover::after {
+    width: 100%;
+}
+
+.main-menu a:hover {
+    color: var(--skyblue);
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    /* Hide by default */
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .menu-toggle {
+        display: block;
+        /* Show hamburger icon on small screens */
+    }
+
+    .main-menu {
+        display: none;
+        /* Hide menu by default on small screens */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        /* Position below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: hsla(0, 0%, 0%, 0.97);
+        padding: 20px 0;
+        text-align: center;
+        opacity: 0;
+        /* Start with 0 opacity */
+        transform: translateY(-20px);
+        /* Start slightly above */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .main-menu.active {
+        display: flex;
+        /* Show menu when active */
+        opacity: 1;
+        /* Fully visible */
+        transform: translateY(0);
+        /* Move to original position */
+    }
+
+    .main-menu li {
+        margin: 10px 0;
+    }
+
+    /* Add animation for menu items */
+    .main-menu li {
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .main-menu.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Delay animations for each menu item */
+    .main-menu.active li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .main-menu.active li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .main-menu.active li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .main-menu.active li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+}
